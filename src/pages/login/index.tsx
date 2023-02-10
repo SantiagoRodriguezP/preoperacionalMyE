@@ -10,8 +10,13 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormGroup from "@mui/material/FormGroup";
 import TextField from "@mui/material/TextField";
 import Image from 'next/image';
+import { useRouter } from "next/router";
 
 function Login() {
+  const router = useRouter();
+  const login = () => {
+    router.push('./home');
+  }
   return (
     <Stack width="100vw" height="100vh">
       <Stack alignItems="center">
@@ -40,7 +45,7 @@ function Login() {
             <FormGroup>
               <FormControlLabel control={<Checkbox />} label="Recuerdame" />
             </FormGroup>
-            <Button variant="contained">Ingresar</Button>
+            <Button variant="contained" onClick={login}>Ingresar</Button>
             <Stack flexDirection="row" justifyContent="center" alignItems="center">
               <Typography variant="body1" sx={{color:'#8F95B2'}} mr={2}>By</Typography>
               <Image
