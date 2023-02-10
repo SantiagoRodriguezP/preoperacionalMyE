@@ -6,10 +6,11 @@ import {CardContent,CardMedia, TextField} from "@mui/material";
 import EventIcon from '@mui/icons-material/Event';
 import SearchIcon from '@mui/icons-material/Search';
 import { Stack,InputAdornment } from '@mui/material';
+import Image from 'next/image';
 
  const HomePage = () => {
   return (
-    <Box>
+    <Stack width='100vw' height='100vh'>
       <AppBar position="static" color="primary">
         <Toolbar sx={{backgroundColor:'#003972'}}>
           <Box sx={{flexGrow:1}}>
@@ -56,7 +57,16 @@ import { Stack,InputAdornment } from '@mui/material';
           </CardContent>
         </Card>
       </Stack>
-    </Box>
+      <Stack justifyContent='center' alignItems='center'>
+        <Image 
+          src="./ElegirEquipo.svg"
+          alt="default state"
+          width={200}
+          height={200}
+          />
+        <Typography variant="h6" mt={2}>¡Elegir un equipo para comenzar!</Typography>
+      </Stack>
+    </Stack>
   )
 }
 
