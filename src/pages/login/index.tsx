@@ -27,9 +27,8 @@ function Login() {
           height={334}
           />
       </Stack>
-      {/* <Stack alignContent="center"> */}
-      <Card variant="outlined" sx={{display:'flex', justifyContent:'center', }}>
-        <CardContent sx={{position:"absolute",top:'297px',display:'flex',flexDirection:'column',justifyContent:'center', width:"428px", height:"628px", backgroundColor:"white", borderRadius:"16px 16px 0px 0px"}}>
+      <Card sx={{display:'flex', justifyContent:'center' }}>
+        <CardContent sx={{position:"absolute",top:'265px',display:'flex',flexDirection:'column',justifyContent:'center', width:428, height:600, backgroundColor:"white", borderRadius:"16px 16px 0px 0px"}}>
           <Stack alignItems="center">
             <Image
               src="./logoM&E.svg"
@@ -39,29 +38,25 @@ function Login() {
             />
             <Typography variant="body1" mt={1}>Maquinaria y Equipos</Typography>
           </Stack>
-          <Stack gap={3}  pl={5} pr={5} mt={2}>
+          <Stack gap={3}  pl={7} pr={7} mt={3}>
             <TextField id="usuario" label="Usuario" variant="outlined"/>
             <TextField id="contraseña" label="Contraseña" variant="outlined"/>
             <FormGroup>
               <FormControlLabel control={<Checkbox />} label="Recuerdame" />
             </FormGroup>
             <Button variant="contained" onClick={login}>Ingresar</Button>
-            <Stack flexDirection="row" justifyContent="center" alignItems="center">
+            <Stack flexDirection="row" justifyContent="center" alignItems="center" mt={3}>
               <Typography variant="body1" sx={{color:'#8F95B2'}} mr={2}>By</Typography>
               <Image
                 src="./logo-sinco.svg"
-                alt="Logo M&E"
-                width={160}
-                height={72}
+                alt="Logo Sinco"
+                width={119}
+                height={24}
                 />
           </Stack>
           </Stack>
         </CardContent>
       </Card>
-      {/* </Stack> */}
-      <Stack sx={{backgroundColor:'red'}} width={428}>
-
-      </Stack>
     </Stack>
   )
 }
